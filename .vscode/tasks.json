@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Activate VENV & Run Mapper",
+            "type": "shell",
+            "windows": {
+                "command": "venv\\Scripts\\activate && python mapper.py"
+            },
+            "linux": {
+                "command": "source venv/bin/activate && python mapper.py"
+            },
+            "osx": {
+                "command": "source venv/bin/activate && python mapper.py"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        }
+    ]
+}

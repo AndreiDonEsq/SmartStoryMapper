@@ -7,3 +7,11 @@ venv/
 # Python cache
 __pycache__/
 *.pyc
+
+# keep in mind not to push dataset, have to get it separately from git due to its size
+# dataset currently expects audio and meta from ESC-50-master
+dataset/
+output/
+
+# macOS clutter (just in case)
+.DS_Store
