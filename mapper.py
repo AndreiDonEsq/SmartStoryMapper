@@ -2,6 +2,7 @@ import os
 import json
 import csv
 import re
+import random
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -11,34 +12,31 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
-# open to using other models, haven't really checked pricing yet, but this one is pretty good for testing
 model = genai.GenerativeModel('gemini-2.5-flash')
 
-# Read all unique categories from the ESC-50 dataset
-available_sounds = set()
+# map categories to all their available filenames
+category_to_files = {}
 with open('dataset/meta/esc50.csv', mode='r', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
-        # Replacing underscores with spaces to make it easier for the AI to read
         clean_category = row['category'].replace('_', ' ')
-        available_sounds.add(clean_category)
-available_sounds = list(available_sounds)
+        filename = row['filename']
+        
+        if clean_category not in category_to_files:
+            category_to_files[clean_category] = []
+        category_to_files[clean_category].append(filename)
 
-# Read the story text from a file
+# just the category names for the AI prompt
+available_sounds = list(category_to_files.keys())
+
 with open('textToMap.txt', 'r', encoding='utf-8') as file:
     story_text = file.read()
 
-# Split the story into individual sentences using regex
-# Why? well, the LLM will forget a LOT of the story and focus on just some sentences
+# split into sentences
 sentences = re.split(r'(?<=[.!?]) +', story_text.replace('\n', ' '))
 sentences = [s.strip() for s in sentences if len(s.strip()) > 5]
 
-final_audio_map = {}
-
-print(f"Processing {len(sentences)} sentences...")
-
-# batch the sentences into a numbered list so we only make one api call
-# this avoids the 429 rate limit error on the free tier
+# batch the sentences into a numbered list
 numbered_sentences = "\n".join([f"{i}. {s}" for i, s in enumerate(sentences)])
 
 prompt = f"""
@@ -59,7 +57,6 @@ If no sound matches, the value MUST be "NONE".
 Do not skip any numbers. The JSON output must have exactly {len(sentences)} keys.
 """
 
-# force gemini to return a clean json object
 response = model.generate_content(
     prompt,
     generation_config=genai.GenerationConfig(
@@ -68,16 +65,25 @@ response = model.generate_content(
     )
 )
 
-# map the numbers back to the actual sentences
 raw_map = json.loads(response.text)
 final_audio_map = {}
 
+# map the numbers back to sentences and assign a random filename
 for num_str, label in raw_map.items():
-    if label != "NONE" and label in available_sounds:
+    if label != "NONE" and label in category_to_files:
         idx = int(num_str)
         actual_sentence = sentences[idx]
-        final_audio_map[actual_sentence] = label
-        print(f"Found: {label} -> {actual_sentence[:40]}...")
+        
+        # the magic: pick a random file from this category's list
+        # is this magic? we shall see if random suffices or if we need a more deterministic approach later
+        chosen_file = random.choice(category_to_files[label])
+        
+        # save BOTH the label and the filename as a dictionary
+        final_audio_map[actual_sentence] = {
+            "label": label,
+            "file": chosen_file
+        }
+        print(f"Found: {label} -> {chosen_file} | {actual_sentence[:40]}...")
 
 output_path = 'output/story_map.json'
 
