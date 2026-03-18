@@ -4,6 +4,9 @@
         {
             "label": "Activate VENV & Run Mapper",
             "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/story-mapper-ai"
+            },
             "windows": {
                 "command": "venv\\Scripts\\activate && python mapper.py"
             },
