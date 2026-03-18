@@ -8,10 +8,29 @@ venv/
 __pycache__/
 *.pyc
 
-# keep in mind not to push dataset, have to get it separately from git due to its size
+
+# Python / AI backend ignores
+story-mapper-ai/venv/
+story-mapper-ai/__pycache__/
+story-mapper-ai/dataset/
+
+# Android IDE ignores
+android-app/.idea/
+android-app/**/*.iml
+android-app/local.properties
+
+# Android Build ignores
+android-app/build/
+android-app/app/build/
+android-app/.gradle/
+
+# MASSIVE FILES
 # dataset currently expects audio and meta from ESC-50-master
+# android app audio expects audio from ESC-50-master
+android-app/app/src/main/assets/audio/
 dataset/
 output/
+
 
 # macOS clutter (just in case)
 .DS_Store
