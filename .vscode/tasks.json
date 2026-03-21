@@ -8,7 +8,7 @@
                 "cwd": "${workspaceFolder}/story-mapper-ai"
             },
             "windows": {
-                "command": "venv\\Scripts\\activate && python mapper.py"
+                "command": "venv\\Scripts\\python.exe mapper.py"
             },
             "linux": {
                 "command": "source venv/bin/activate && python mapper.py"

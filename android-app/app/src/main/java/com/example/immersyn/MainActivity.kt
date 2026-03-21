@@ -61,6 +61,12 @@ class MainActivity : ComponentActivity() {
                 setDataSource(descriptor.fileDescriptor, descriptor.startOffset, descriptor.length)
                 descriptor.close()
                 prepare()
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                    if (android.media.audiofx.HapticGenerator.isAvailable()) {
+                        val hapticGenerator = android.media.audiofx.HapticGenerator.create(mediaPlayer!!.audioSessionId)
+                        hapticGenerator.enabled = true
+                    }
+                }
                 start()
             }
         } catch (e: Exception) {
