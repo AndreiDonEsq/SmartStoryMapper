@@ -34,3 +34,5 @@ output/
 
 # macOS clutter (just in case)
 .DS_Store
+
+ios-app/Immersyn/Immersyn/Resources/audio/
