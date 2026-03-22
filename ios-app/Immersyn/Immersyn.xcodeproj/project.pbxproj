@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00100000000000000000001 /* ImmersynApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000001 /* ImmersynApp.swift */; };
+		B00100000000000000000002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000002 /* Models.swift */; };
+		B00100000000000000000003 /* StoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000003 /* StoryLoader.swift */; };
+		B00100000000000000000004 /* AudioTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000004 /* AudioTransitionController.swift */; };
+		B00100000000000000000005 /* HapticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000005 /* HapticsController.swift */; };
+		B00100000000000000000006 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000006 /* ReaderViewModel.swift */; };
+		B00100000000000000000007 /* VerticalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000007 /* VerticalPagingViewController.swift */; };
+		B00100000000000000000008 /* ImmersiveReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000008 /* ImmersiveReaderView.swift */; };
+		B00100000000000000000009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000009 /* Assets.xcassets */; };
+		B0010000000000000000000A /* textToMap.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0010000000000000000000A /* textToMap.txt */; };
+		B0010000000000000000000B /* story_map.json in Resources */ = {isa = PBXBuildFile; fileRef = F0010000000000000000000B /* story_map.json */; };
+		B0010000000000000000000C /* audio in Resources */ = {isa = PBXBuildFile; fileRef = F0010000000000000000000C /* audio */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F00100000000000000000001 /* ImmersynApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersynApp.swift; sourceTree = "<group>"; };
+		F00100000000000000000002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F00100000000000000000003 /* StoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLoader.swift; sourceTree = "<group>"; };
+		F00100000000000000000004 /* AudioTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTransitionController.swift; sourceTree = "<group>"; };
+		F00100000000000000000005 /* HapticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsController.swift; sourceTree = "<group>"; };
+		F00100000000000000000006 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
+		F00100000000000000000007 /* VerticalPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPagingViewController.swift; sourceTree = "<group>"; };
+		F00100000000000000000008 /* ImmersiveReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveReaderView.swift; sourceTree = "<group>"; };
+		F00100000000000000000009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0010000000000000000000A /* textToMap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = textToMap.txt; sourceTree = "<group>"; };
+		F0010000000000000000000B /* story_map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = story_map.json; sourceTree = "<group>"; };
+		F0010000000000000000000C /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
+		P00100000000000000000001 /* Immersyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Immersyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FW1000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00100000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G00100000000000000000002 /* Immersyn */,
+				G00100000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G00100000000000000000002 /* Immersyn */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000001 /* ImmersynApp.swift */,
+				F00100000000000000000002 /* Models.swift */,
+				F00100000000000000000003 /* StoryLoader.swift */,
+				F00100000000000000000004 /* AudioTransitionController.swift */,
+				F00100000000000000000005 /* HapticsController.swift */,
+				F00100000000000000000006 /* ReaderViewModel.swift */,
+				F00100000000000000000007 /* VerticalPagingViewController.swift */,
+				F00100000000000000000008 /* ImmersiveReaderView.swift */,
+				F00100000000000000000009 /* Assets.xcassets */,
+				G00100000000000000000004 /* Resources */,
+			);
+			path = Immersyn;
+			sourceTree = "<group>";
+		};
+		G00100000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				P00100000000000000000001 /* Immersyn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G00100000000000000000004 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0010000000000000000000A /* textToMap.txt */,
+				F0010000000000000000000B /* story_map.json */,
+				F0010000000000000000000C /* audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T00100000000000000000001 /* Immersyn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00100000000000000000002 /* Build configuration list for PBXNativeTarget "Immersyn" */;
+			buildPhases = (
+				S00100000000000000000001 /* Sources */,
+				FW1000000000000000000001 /* Frameworks */,
+				R00100000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Immersyn;
+			productName = Immersyn;
+			productReference = P00100000000000000000001 /* Immersyn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PR1000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T00100000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = C00100000000000000000001 /* Build configuration list for PBXProject "Immersyn" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G00100000000000000000001;
+			productRefGroup = G00100000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T00100000000000000000001 /* Immersyn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R00100000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00100000000000000000009 /* Assets.xcassets in Resources */,
+				B0010000000000000000000A /* textToMap.txt in Resources */,
+				B0010000000000000000000B /* story_map.json in Resources */,
+				B0010000000000000000000C /* audio in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S00100000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00100000000000000000001 /* ImmersynApp.swift in Sources */,
+				B00100000000000000000002 /* Models.swift in Sources */,
+				B00100000000000000000003 /* StoryLoader.swift in Sources */,
+				B00100000000000000000004 /* AudioTransitionController.swift in Sources */,
+				B00100000000000000000005 /* HapticsController.swift in Sources */,
+				B00100000000000000000006 /* ReaderViewModel.swift in Sources */,
+				B00100000000000000000007 /* VerticalPagingViewController.swift in Sources */,
+				B00100000000000000000008 /* ImmersiveReaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		X00100000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		X00100000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		X00100000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX5S9KY4BR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Immersyn;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Immersyn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		X00100000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WX5S9KY4BR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Immersyn;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Immersyn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00100000000000000000001 /* Build configuration list for PBXProject "Immersyn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				X00100000000000000000001 /* Debug */,
+				X00100000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00100000000000000000002 /* Build configuration list for PBXNativeTarget "Immersyn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				X00100000000000000000003 /* Debug */,
+				X00100000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PR1000000000000000000001 /* Project object */;
+}
